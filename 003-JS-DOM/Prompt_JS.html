@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt and Display</title>
+    <style>
+        .btn {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #008CBA;
+        }
+    </style>    
+</head>
+<body>
+    <span id="display-text">Click the button to enter text</span>
+    <button class="btn" onclick="getUserInput()">Enter Text</button>
+
+    <script>
+        function getUserInput() {
+            const userInput = prompt("Please enter some text:");
+            document.getElementById('display-text').textContent = userInput;
+        }
+    </script>
+</body>
+</html>

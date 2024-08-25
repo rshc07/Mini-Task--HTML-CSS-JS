@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Coordinates</title>
+    <style>
+        h1 {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="showCoordinates(event)">Click me to see coordinates</h1>
+    <span id="coords">Coordinates will appear here</span>
+
+    <script>
+        function showCoordinates(event) {
+            const coords = `X: ${event.clientX}, Y: ${event.clientY}`;
+            document.getElementById('coords').textContent = coords;
+        }
+    </script>
+</body>
+</html>

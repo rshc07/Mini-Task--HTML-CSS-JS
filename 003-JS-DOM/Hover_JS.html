@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Hover Color Change</title>
+    <style>
+        .color-change {
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-change" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
+        Hover over me!
+    </div>
+
+    <script>
+        function changeColor(element) {
+            element.style.backgroundColor = 'lightblue';
+        }
+
+        function resetColor(element) {
+            element.style.backgroundColor = '';
+        }
+    </script>
+</body>
+</html>
